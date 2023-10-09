@@ -3,12 +3,15 @@ package Creatures;
 public class Creature {
     private int health;
     private int def;
-    private int attack;
+    private int[] attack;
 
     public Creature(int health, int def, int attack) {
         this.health = health;
         this.def = def;
-        this.attack = attack;
+        for (int i : this.attack) {
+            this.attack[i] = i;
+        }
+
     }
 
 
@@ -20,7 +23,7 @@ public class Creature {
         return def;
     }
 
-    public int getAttack() {
+    public int[] getAttack() {
         return attack;
     }
 
